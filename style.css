@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    padding: 2vh 3vw;
+
+}
+
+svg{
+    border-radius: 5px;
+}
+
+.nav-items{
+    width: 85%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 60px;
+
+}
+.nav-items a{
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 2px;
+}
+
+#nav-item-5{
+    border: 1px solid green;
+    background: yellow;
+}
+#nav-item-6{
+    border: 2px solid green;
+}
+
+
+
+
+
+
+
