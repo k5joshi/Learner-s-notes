@@ -1,44 +1,113 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html,body{
+html,
+body {
     height: 100%;
     width: 100%;
 }
 
-.main{
+.main {
     position: relative;
     overflow: hidden;
 }
 
-.page-1{
+.page-1 {
     height: 100vh;
     width: 100vw;
     position: relative;
-
 }
-.page-1>video{
+
+.page-1>video {
     height: 100%;
     width: 100%;
+    pointer-events: none;
     object-fit: cover;
 }
-.nav{
+
+.nav {
     height: 12vh;
     width: 100%;
-    position: absolute;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: transparent;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0vh 6vw;
-    /* background: red; */
+    z-index: 1000;
 }
 
-#nav-item>button{
+.nav button {
     border-radius: 50px;
     border: 1px solid white;
     padding: 1vh 1.4vw;
+    color: white;
+    background-color: rgb(18, 53, 23);
+}
 
+.nav button:hover {
+    border-radius: 50px;
+    border: 1px solid white;
+    padding: 1vh 1.4vw;
+    color: rgb(28, 24, 24);
+    background-color: rgb(32, 225, 61);
+}
+
+.page1-text {
+    position: absolute;
+    height: 46vh;
+    width: 70vw;
+    left: 5%;
+    bottom: 7%;
+    padding: 1vh 1.4vw;
+}
+
+.page1text-inner {
+    display: flex;
+}
+
+.page1-text>h1 {
+    color: white;
+    line-height: 0.8;
+    font-weight: 800;
+    font-size: 4.5rem;
+    padding-bottom: 1vw;
+}
+
+.page1text-inner>h3 {
+    font-size: 1.3rem;
+    line-height: 1;
+    width: 45vw;
+    font-weight: 200;
+    padding: .4vh 3vw;
+    color: white;
+}
+
+.page1text-inner>button {
+    background: rgb(202 207 190 / 70%);
+    padding: 1.3vh 3vw;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    border: 1px solid rgb(220, 172, 220);
+}
+
+.page1text-inner>button:hover {
+    background: rgba(236, 212, 27, 0.947);
+    padding: 1.3vh 3vw;
+    color: black;
+    font-size: 1.2rem;
+    border-radius: 10px;
+}
+
+.page-2 {
+    height: 100vh;
+    width: 100vw;
+    background: #a70fdb;
+    position: relative;
 }
