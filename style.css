@@ -26,20 +26,36 @@ body {
     width: 100%;
     pointer-events: none;
     object-fit: cover;
+    position: relative;
 }
 
 .nav {
-    height: 12vh;
+    height: 17vh;
     width: 100%;
     position: fixed;
-    top: 0;
-    left: 0;
     background-color: transparent;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0vh 6vw;
     z-index: 1000;
+}
+
+.img-container img {
+    height: 14vh;
+    border-radius: 58px;
+    width: 7vw;
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.7); /* White glow effect */
+    animation: glow 1.5s infinite alternate; /* Animation for the glow effect */
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.7);
+    }
+    to {
+        box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.7);
+    }
 }
 
 .nav button {
@@ -56,58 +72,19 @@ body {
     padding: 1vh 1.4vw;
     color: rgb(28, 24, 24);
     background-color: rgb(32, 225, 61);
+    animation: glow 1s infinite alternate-reverse;
 }
 
-.page1-text {
-    position: absolute;
-    height: 46vh;
-    width: 70vw;
-    left: 5%;
-    bottom: 7%;
-    padding: 1vh 1.4vw;
-}
-
-.page1text-inner {
+.page-1-text{
+    color: aliceblue;
     display: flex;
 }
 
-.page1-text>h1 {
-    color: white;
-    line-height: 0.8;
-    font-weight: 800;
-    font-size: 4.5rem;
-    padding-bottom: 1vw;
-}
-
-.page1text-inner>h3 {
-    font-size: 1.3rem;
-    line-height: 1;
-    width: 45vw;
-    font-weight: 200;
-    padding: .4vh 3vw;
-    color: white;
-}
-
-.page1text-inner>button {
-    background: rgb(202 207 190 / 70%);
-    padding: 1.3vh 3vw;
-    color: white;
-    font-size: 1.2rem;
-    border-radius: 10px;
-    border: 1px solid rgb(220, 172, 220);
-}
-
-.page1text-inner>button:hover {
-    background: rgba(236, 212, 27, 0.947);
-    padding: 1.3vh 3vw;
-    color: black;
-    font-size: 1.2rem;
-    border-radius: 10px;
-}
-
-.page-2 {
+.page-2{
     height: 100vh;
-    width: 100vw;
-    background: #a70fdb;
-    position: relative;
+    width: 100%;
+    background: red;
 }
+
+
+/* Additional media queries for other screen sizes can be added here */
